@@ -286,7 +286,7 @@ export default function SignUp() {
             </RCTransition>
           </div>
           <div className={Styles.footer}>
-            Don't have an account?
+            Don&apos;t have an account?
             <Link href="/signup">
               <a>Sign up</a>
             </Link>
