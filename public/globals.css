@@ -1,0 +1,236 @@
+@import url("https://css.gg/check-o.css");
+:root {
+  --bodyBg: #ffffff;
+  --menuBg: #ffffff;
+  --purple: #6939ff;
+  --pink: #f8f5ff;
+  --scroller: #faf2eb;
+  --noBorder: 0;
+  --noMargin: 0;
+  --noShadow: none;
+  --loaderBg: #211b42;
+  --loginCta: #0e093f;
+  --dark: #000000;
+  --headerDesc: #4a476f;
+  --absolute: absolute;
+  --fullHeight: 100vh;
+  --fullWidth: 100vw;
+  --noOverflow: hidden !important;
+  --success: #3bdf4c;
+  --error: #f23c3c;
+  --warning: #f2ab55;
+}
+
+@font-face {
+  font-family: "Helonik-Light";
+  src: url("./themes/fonts/Helonik-Light.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/Helonik-Light.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/Helonik-Light.woff") format("woff"),
+    /* Modern Browsers */ url("./themes/fonts/Helonik-Light.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Helonik-Regular";
+  src: url("./themes/fonts/Helonik-Regular.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/Helonik-Regular.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/Helonik-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("./themes/fonts/Helonik-Regular.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Helonik-Medium";
+  src: url("./themes/fonts/Helonik-Medium.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/Helonik-Medium.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/Helonik-Medium.woff") format("woff"),
+    /* Modern Browsers */ url("./themes/fonts/Helonik-Medium.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "MonumentExtended-Ultralight";
+  src: url("./themes/fonts/MonumentExtended-Ultralight.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/MonumentExtended-Ultralight.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/MonumentExtended-Ultralight.woff")
+      format("woff"),
+    /* Modern Browsers*/ url("./themes/fonts/MonumentExtended-Ultralight.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "MonumentExtended-Light";
+  src: url("./themes/fonts/MonumentExtended-Light.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/MonumentExtended-Light.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/MonumentExtended-Light.woff")
+      format("woff"),
+    /* Modern Browsers*/ url("./themes/fonts/MonumentExtended-Light.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "MonumentExtended-Regular";
+  src: url("./themes/fonts/MonumentExtended-Regular.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/MonumentExtended-Regular.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/MonumentExtended-Regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./themes/fonts/MonumentExtended-Regular.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "MonumentExtended-Bold";
+  src: url("./themes/fonts/MonumentExtended-Bold.woff"); /* IE9 Compat Modes */
+  src: url("./themes/fonts/MonumentExtended-Bold.woff?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./themes/fonts/MonumentExtended-Bold.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./themes/fonts/Helonik-Medium.woff")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder {
+  font-family: "Helonik-Light", monospace !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+  text-align: left;
+  text-transform: capitalize !important;
+  color: #87849f !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+label {
+  font-family: "Helonik-Regular", monospace !important;
+  font-size: 1rem !important;
+  font-weight: 400;
+  color: var(--loginCta) !important;
+  text-align: left;
+  margin-bottom: 8px;
+}
+h1 {
+  color: var(--loginCta);
+  font-family: "Helonik-Regular", monospace;
+}
+p {
+  font-family: "Helonik-Light", monospace;
+  font-style: normal !important;
+  font-weight: 300;
+  font-size: 16px !important;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: var(--loginCta) !important;
+}
+/* apply error styles to input */
+.field.onboarding.error input {
+  box-shadow: 0px -4px 0px var(--error) inset !important;
+  opacity: 0.5;
+  width: 100%;
+  align-self: stretch;
+  border: 1px solid var(--error) !important;
+}
+/* error box msg style */
+.error-box {
+  font-family: "Helonik-Regular", monospace;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  color: #a70000;
+  position: relative;
+  bottom: 8px;
+  text-align: left;
+}
+
+.password-info,
+.cta-info {
+  width: 100%;
+  background: #faf2eb;
+  display: block;
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  color: #0e093f;
+  font-family: Helonik-Regular, monospace;
+}
+.password-info .content {
+  text-align: left !important;
+}
+.password-info .success,
+.transfer-box,
+.success-box {
+  color: green !important;
+}
+/* toast styles */
+
+.toast-main {
+  max-width: 420px;
+  width: 100%;
+}
+.toast-main div {
+  justify-content: flex-start !important;
+}
+
+.toast-icon {
+  margin-left: -10px;
+  display: inline-block;
+  position: relative;
+}
+
+.toast-title,
+.toast-msg {
+  font-family: Helonik-Regular, monospace;
+  color: var(--loginCta);
+}
+
+.toast-title {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+.toast-msg {
+  font-weight: 500;
+  font-size: 1.1em;
+  padding-left: 1.2em;
+}
+/* password toggler styles*/
+#password-toggler {
+  position: absolute;
+  right: 2%;
+  top: 40px;
+  cursor: pointer;
+  color: #4a476f;
+}
+#password-toggler > svg {
+  font-size: 34px !important;
+}
