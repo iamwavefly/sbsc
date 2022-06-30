@@ -1,0 +1,13 @@
+.location {
+  width: max-content;
+  max-width: 20rem;
+  margin: 10rem auto auto;
+  font-family: "Helonik-Light", monospace;
+  font-size: 18px;
+  color: var(--loginCta);
+  text-align: center;
+  line-height: 26px;
+}
+.location > span {
+  font-family: "Helonik-Regular", monospace;
+}

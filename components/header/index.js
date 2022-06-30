@@ -10,29 +10,19 @@ export default function MainHeader() {
       <Container>
         <Menu secondary>
           <Menu.Item
-            name="Dashboard"
-            active={activeNav === "Dashboard"}
+            name="My Account"
+            active={activeNav === "My Account"}
             onClick={handleItemClick}
           />
           <Menu.Item
-            name="users"
-            active={activeNav === "users"}
-            onClick={handleItemClick}
-          />
-          <Menu.Item
-            name="jobs"
-            active={activeNav === "jobs"}
+            name="Users"
+            active={activeNav === "Users"}
             onClick={handleItemClick}
           />
           <Menu.Menu position="right">
             <Menu.Item>
               <Input icon="search" placeholder="Search users..." />
             </Menu.Item>
-            <Menu.Item
-              name="profile"
-              active={activeNav === "profile"}
-              onClick={handleItemClick}
-            />
           </Menu.Menu>
         </Menu>
       </Container>
